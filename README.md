@@ -12,4 +12,4 @@ Read from CSV file using VIP+Programmatically UI
 
 ## Deployment Target
 
-- iOS 13.2
+- iOS 13.5

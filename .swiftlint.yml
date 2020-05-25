@@ -1,0 +1,34 @@
+disabled_rules:
+  - trailing_comma
+
+line_length:
+    warning: 100
+    error: 120
+    ignores_urls: true
+
+indentation: 2
+
+type_name:
+  min_length: 3
+  max_length: 45
+
+identifier_name:
+  min_length: 2
+  max_length: 45
+  allowed_symbols: "_" # To enable underscore prefixes
+  validates_start_with_lowercase: false # To enable underscore prefixes
+  excluded:
+    - x
+    - y
+    - z
+
+large_tuple:
+   - 4
+   - 6
+
+nesting:
+    type_level: 4
+
+excluded:
+  - Libraries/CSVPublisher/.build/ # With nested config this exception is not working for some reason
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:NyanBankVIP.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:Libraries"
+      name = "Libraries">
+      <Group
+         location = "group:Modules"
+         name = "Modules">
+         <FileRef
+            location = "group:/Users/xdmgzdev/iOSWorkspace/assigments/NyanBankVIP/Libraries/Modules/Persons">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Helpers"
+         name = "Helpers">
+         <Group
+            location = "group:Combine"
+            name = "Combine">
+            <FileRef
+               location = "group:/Users/xdmgzdev/iOSWorkspace/assigments/NyanBankVIP/Libraries/Helpers/Combine/ClosureSubscription">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:/Users/xdmgzdev/iOSWorkspace/assigments/NyanBankVIP/Libraries/Helpers/SwiftUI">
+         </FileRef>
+         <FileRef
+            location = "group:/Users/xdmgzdev/iOSWorkspace/assigments/NyanBankVIP/Libraries/Helpers/CSVPublisher">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>

@@ -10,26 +10,10 @@
       <Group
          location = "group:Modules"
          name = "Modules">
-         <FileRef
-            location = "group:/Users/xdmgzdev/iOSWorkspace/assigments/NyanBankVIP/Libraries/Modules/Persons">
-         </FileRef>
       </Group>
       <Group
          location = "group:Helpers"
          name = "Helpers">
-         <Group
-            location = "group:Combine"
-            name = "Combine">
-            <FileRef
-               location = "group:/Users/xdmgzdev/iOSWorkspace/assigments/NyanBankVIP/Libraries/Helpers/Combine/ClosureSubscription">
-            </FileRef>
-         </Group>
-         <FileRef
-            location = "group:/Users/xdmgzdev/iOSWorkspace/assigments/NyanBankVIP/Libraries/Helpers/SwiftUI">
-         </FileRef>
-         <FileRef
-            location = "group:/Users/xdmgzdev/iOSWorkspace/assigments/NyanBankVIP/Libraries/Helpers/CSVPublisher">
-         </FileRef>
       </Group>
    </Group>
 </Workspace>

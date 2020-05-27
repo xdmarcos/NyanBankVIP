@@ -3,19 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A6FCFA6247C15F300D434EB /* Persons in Frameworks */ = {isa = PBXBuildFile; productRef = 7A6FCFA5247C15F300D434EB /* Persons */; };
-		7A6FCFA8247C160D00D434EB /* SwiftUIHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = 7A6FCFA7247C160D00D434EB /* SwiftUIHelpers */; };
+		7A01FF97247D747400472EC5 /* PersonsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01FF90247D747400472EC5 /* PersonsListPresenter.swift */; };
+		7A01FF98247D747400472EC5 /* PersonsListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01FF91247D747400472EC5 /* PersonsListWorker.swift */; };
+		7A01FF99247D747400472EC5 /* PersonsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01FF92247D747400472EC5 /* PersonsListRouter.swift */; };
+		7A01FF9A247D747400472EC5 /* PersonsListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01FF93247D747400472EC5 /* PersonsListModels.swift */; };
+		7A01FF9B247D747400472EC5 /* PersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01FF94247D747400472EC5 /* PersonsListViewController.swift */; };
+		7A01FF9C247D747400472EC5 /* PersonsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01FF95247D747400472EC5 /* PersonsListInteractor.swift */; };
+		7A01FF9D247D747400472EC5 /* PersonsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01FF96247D747400472EC5 /* PersonsListView.swift */; };
+		7A468186247D1E0C006970AC /* ScreenStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A468185247D1E0C006970AC /* ScreenStack.swift */; };
 		7AC51086247BFC0500209F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC51085247BFC0500209F21 /* AppDelegate.swift */; };
 		7AC51088247BFC0500209F21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC51087247BFC0500209F21 /* SceneDelegate.swift */; };
-		7AC5108A247BFC0500209F21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC51089247BFC0500209F21 /* ViewController.swift */; };
-		7AC5108D247BFC0500209F21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AC5108B247BFC0500209F21 /* Main.storyboard */; };
+		7AC5108A247BFC0500209F21 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC51089247BFC0500209F21 /* RootViewController.swift */; };
 		7AC5108F247BFC0700209F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AC5108E247BFC0700209F21 /* Assets.xcassets */; };
 		7AC51092247BFC0700209F21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AC51090247BFC0700209F21 /* LaunchScreen.storyboard */; };
 		7AC5109D247BFC0700209F21 /* NyanBankVIPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC5109C247BFC0700209F21 /* NyanBankVIPTests.swift */; };
+		7ADA4723247D7A9100C49002 /* Small.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7ADA4720247D7A9100C49002 /* Small.csv */; };
+		7ADA4724247D7A9100C49002 /* Medium.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7ADA4721247D7A9100C49002 /* Medium.csv */; };
+		7ADA4725247D7A9100C49002 /* Tiny.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7ADA4722247D7A9100C49002 /* Tiny.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,17 +37,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A01FF90247D747400472EC5 /* PersonsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListPresenter.swift; sourceTree = "<group>"; };
+		7A01FF91247D747400472EC5 /* PersonsListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListWorker.swift; sourceTree = "<group>"; };
+		7A01FF92247D747400472EC5 /* PersonsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListRouter.swift; sourceTree = "<group>"; };
+		7A01FF93247D747400472EC5 /* PersonsListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListModels.swift; sourceTree = "<group>"; };
+		7A01FF94247D747400472EC5 /* PersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListViewController.swift; sourceTree = "<group>"; };
+		7A01FF95247D747400472EC5 /* PersonsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListInteractor.swift; sourceTree = "<group>"; };
+		7A01FF96247D747400472EC5 /* PersonsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListView.swift; sourceTree = "<group>"; };
+		7A468185247D1E0C006970AC /* ScreenStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStack.swift; sourceTree = "<group>"; };
 		7AC51082247BFC0500209F21 /* NyanBankVIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NyanBankVIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC51085247BFC0500209F21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AC51087247BFC0500209F21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7AC51089247BFC0500209F21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7AC5108C247BFC0500209F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7AC51089247BFC0500209F21 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		7AC5108E247BFC0700209F21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AC51091247BFC0700209F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AC51093247BFC0700209F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AC51098247BFC0700209F21 /* NyanBankVIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NyanBankVIPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC5109C247BFC0700209F21 /* NyanBankVIPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NyanBankVIPTests.swift; sourceTree = "<group>"; };
 		7AC5109E247BFC0700209F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ADA4720247D7A9100C49002 /* Small.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Small.csv; sourceTree = "<group>"; };
+		7ADA4721247D7A9100C49002 /* Medium.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Medium.csv; sourceTree = "<group>"; };
+		7ADA4722247D7A9100C49002 /* Tiny.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tiny.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,8 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A6FCFA8247C160D00D434EB /* SwiftUIHelpers in Frameworks */,
-				7A6FCFA6247C15F300D434EB /* Persons in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +78,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A01FF8F247D742E00472EC5 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				7A01FF96247D747400472EC5 /* PersonsListView.swift */,
+				7A01FF94247D747400472EC5 /* PersonsListViewController.swift */,
+				7A01FF95247D747400472EC5 /* PersonsListInteractor.swift */,
+				7A01FF91247D747400472EC5 /* PersonsListWorker.swift */,
+				7A01FF90247D747400472EC5 /* PersonsListPresenter.swift */,
+				7A01FF92247D747400472EC5 /* PersonsListRouter.swift */,
+				7A01FF93247D747400472EC5 /* PersonsListModels.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		7A01FF9E247D749800472EC5 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7A01FF8F247D742E00472EC5 /* List */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
+		7A01FF9F247D74BC00472EC5 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				7AC51089247BFC0500209F21 /* RootViewController.swift */,
+				7A01FF9E247D749800472EC5 /* scenes */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		7A01FFA0247D74D100472EC5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7ADA471F247D7A9100C49002 /* Samples */,
+				7AC5108E247BFC0700209F21 /* Assets.xcassets */,
+				7AC51090247BFC0700209F21 /* LaunchScreen.storyboard */,
+				7AC51093247BFC0700209F21 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		7A6FCFA4247C15F300D434EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,12 +150,10 @@
 			isa = PBXGroup;
 			children = (
 				7AC51085247BFC0500209F21 /* AppDelegate.swift */,
+				7A468185247D1E0C006970AC /* ScreenStack.swift */,
 				7AC51087247BFC0500209F21 /* SceneDelegate.swift */,
-				7AC51089247BFC0500209F21 /* ViewController.swift */,
-				7AC5108B247BFC0500209F21 /* Main.storyboard */,
-				7AC5108E247BFC0700209F21 /* Assets.xcassets */,
-				7AC51090247BFC0700209F21 /* LaunchScreen.storyboard */,
-				7AC51093247BFC0700209F21 /* Info.plist */,
+				7A01FF9F247D74BC00472EC5 /* Interface */,
+				7A01FFA0247D74D100472EC5 /* Supporting Files */,
 			);
 			path = NyanBankVIP;
 			sourceTree = "<group>";
@@ -109,6 +165,17 @@
 				7AC5109E247BFC0700209F21 /* Info.plist */,
 			);
 			path = NyanBankVIPTests;
+			sourceTree = "<group>";
+		};
+		7ADA471F247D7A9100C49002 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				7ADA4720247D7A9100C49002 /* Small.csv */,
+				7ADA4721247D7A9100C49002 /* Medium.csv */,
+				7ADA4722247D7A9100C49002 /* Tiny.csv */,
+			);
+			name = Samples;
+			path = "../../../NyanBank-Andris/NyanBank/Resources/Samples";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,8 +195,6 @@
 			);
 			name = NyanBankVIP;
 			packageProductDependencies = (
-				7A6FCFA5247C15F300D434EB /* Persons */,
-				7A6FCFA7247C160D00D434EB /* SwiftUIHelpers */,
 			);
 			productName = NyanBankVIP;
 			productReference = 7AC51082247BFC0500209F21 /* NyanBankVIP.app */;
@@ -197,8 +262,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC51092247BFC0700209F21 /* LaunchScreen.storyboard in Resources */,
+				7ADA4724247D7A9100C49002 /* Medium.csv in Resources */,
 				7AC5108F247BFC0700209F21 /* Assets.xcassets in Resources */,
-				7AC5108D247BFC0500209F21 /* Main.storyboard in Resources */,
+				7ADA4725247D7A9100C49002 /* Tiny.csv in Resources */,
+				7ADA4723247D7A9100C49002 /* Small.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,8 +283,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AC5108A247BFC0500209F21 /* ViewController.swift in Sources */,
+				7A01FF98247D747400472EC5 /* PersonsListWorker.swift in Sources */,
+				7AC5108A247BFC0500209F21 /* RootViewController.swift in Sources */,
+				7A468186247D1E0C006970AC /* ScreenStack.swift in Sources */,
 				7AC51086247BFC0500209F21 /* AppDelegate.swift in Sources */,
+				7A01FF9B247D747400472EC5 /* PersonsListViewController.swift in Sources */,
+				7A01FF9D247D747400472EC5 /* PersonsListView.swift in Sources */,
+				7A01FF9A247D747400472EC5 /* PersonsListModels.swift in Sources */,
+				7A01FF99247D747400472EC5 /* PersonsListRouter.swift in Sources */,
+				7A01FF9C247D747400472EC5 /* PersonsListInteractor.swift in Sources */,
+				7A01FF97247D747400472EC5 /* PersonsListPresenter.swift in Sources */,
 				7AC51088247BFC0500209F21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,14 +316,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7AC5108B247BFC0500209F21 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7AC5108C247BFC0500209F21 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7AC51090247BFC0700209F21 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -380,7 +447,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6883KSJ62E;
-				INFOPLIST_FILE = NyanBankVIP/Info.plist;
+				INFOPLIST_FILE = "NyanBankVIP/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,7 +465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6883KSJ62E;
-				INFOPLIST_FILE = NyanBankVIP/Info.plist;
+				INFOPLIST_FILE = "NyanBankVIP/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,7 +485,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6883KSJ62E;
 				INFOPLIST_FILE = NyanBankVIPTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,7 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6883KSJ62E;
 				INFOPLIST_FILE = NyanBankVIPTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,17 +552,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		7A6FCFA5247C15F300D434EB /* Persons */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Persons;
-		};
-		7A6FCFA7247C160D00D434EB /* SwiftUIHelpers */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SwiftUIHelpers;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7AC5107A247BFC0500209F21 /* Project object */;
 }

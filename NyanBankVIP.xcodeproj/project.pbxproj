@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		7A01FF9C247D747400472EC5 /* PersonsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01FF95247D747400472EC5 /* PersonsListInteractor.swift */; };
 		7A01FF9D247D747400472EC5 /* PersonsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A01FF96247D747400472EC5 /* PersonsListView.swift */; };
 		7A468186247D1E0C006970AC /* ScreenStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A468185247D1E0C006970AC /* ScreenStack.swift */; };
+		7A6B6E4F248945C500287846 /* Persons in Frameworks */ = {isa = PBXBuildFile; productRef = 7A6B6E4E248945C500287846 /* Persons */; };
+		7A6B6E51248948A700287846 /* PersonsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6B6E50248948A700287846 /* PersonsListTableViewCell.swift */; };
 		7AC51086247BFC0500209F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC51085247BFC0500209F21 /* AppDelegate.swift */; };
 		7AC51088247BFC0500209F21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC51087247BFC0500209F21 /* SceneDelegate.swift */; };
 		7AC5108A247BFC0500209F21 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC51089247BFC0500209F21 /* RootViewController.swift */; };
@@ -45,6 +47,7 @@
 		7A01FF95247D747400472EC5 /* PersonsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListInteractor.swift; sourceTree = "<group>"; };
 		7A01FF96247D747400472EC5 /* PersonsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListView.swift; sourceTree = "<group>"; };
 		7A468185247D1E0C006970AC /* ScreenStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStack.swift; sourceTree = "<group>"; };
+		7A6B6E50248948A700287846 /* PersonsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListTableViewCell.swift; sourceTree = "<group>"; };
 		7AC51082247BFC0500209F21 /* NyanBankVIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NyanBankVIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC51085247BFC0500209F21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AC51087247BFC0500209F21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6B6E4F248945C500287846 /* Persons in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +85,7 @@
 		7A01FF8F247D742E00472EC5 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				7A6B6E50248948A700287846 /* PersonsListTableViewCell.swift */,
 				7A01FF96247D747400472EC5 /* PersonsListView.swift */,
 				7A01FF94247D747400472EC5 /* PersonsListViewController.swift */,
 				7A01FF95247D747400472EC5 /* PersonsListInteractor.swift */,
@@ -195,6 +200,7 @@
 			);
 			name = NyanBankVIP;
 			packageProductDependencies = (
+				7A6B6E4E248945C500287846 /* Persons */,
 			);
 			productName = NyanBankVIP;
 			productReference = 7AC51082247BFC0500209F21 /* NyanBankVIP.app */;
@@ -285,6 +291,7 @@
 			files = (
 				7A01FF98247D747400472EC5 /* PersonsListWorker.swift in Sources */,
 				7AC5108A247BFC0500209F21 /* RootViewController.swift in Sources */,
+				7A6B6E51248948A700287846 /* PersonsListTableViewCell.swift in Sources */,
 				7A468186247D1E0C006970AC /* ScreenStack.swift in Sources */,
 				7AC51086247BFC0500209F21 /* AppDelegate.swift in Sources */,
 				7A01FF9B247D747400472EC5 /* PersonsListViewController.swift in Sources */,
@@ -552,6 +559,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A6B6E4E248945C500287846 /* Persons */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Persons;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7AC5107A247BFC0500209F21 /* Project object */;
 }

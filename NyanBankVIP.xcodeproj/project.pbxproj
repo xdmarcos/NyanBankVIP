@@ -19,14 +19,11 @@
 		7A6B6E51248948A700287846 /* PersonsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6B6E50248948A700287846 /* PersonsListTableViewCell.swift */; };
 		7ABBA254249117E2001B048D /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 7ABBA253249117E2001B048D /* UIComponents */; };
 		7ABBA2602497A613001B048D /* PersonsDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBA2592497A613001B048D /* PersonsDetailPresenter.swift */; };
-		7ABBA2612497A613001B048D /* PersonsDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBA25A2497A613001B048D /* PersonsDetailWorker.swift */; };
 		7ABBA2622497A613001B048D /* PersonsDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBA25B2497A613001B048D /* PersonsDetailRouter.swift */; };
 		7ABBA2632497A613001B048D /* PersonsDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBA25C2497A613001B048D /* PersonsDetailModels.swift */; };
 		7ABBA2642497A613001B048D /* PersonsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBA25D2497A613001B048D /* PersonsDetailViewController.swift */; };
 		7ABBA2652497A613001B048D /* PersonsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBA25E2497A613001B048D /* PersonsDetailInteractor.swift */; };
 		7ABBA2662497A613001B048D /* PersonsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBA25F2497A613001B048D /* PersonsDetailView.swift */; };
-		7ABBA2682497A74F001B048D /* PersonsDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBA2672497A74F001B048D /* PersonsDetailTableViewCell.swift */; };
-		7ABBA26A2497A80F001B048D /* PersonsDetailHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABBA2692497A80F001B048D /* PersonsDetailHeaderFooterView.swift */; };
 		7AC51086247BFC0500209F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC51085247BFC0500209F21 /* AppDelegate.swift */; };
 		7AC51088247BFC0500209F21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC51087247BFC0500209F21 /* SceneDelegate.swift */; };
 		7AC5108A247BFC0500209F21 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC51089247BFC0500209F21 /* RootViewController.swift */; };
@@ -59,14 +56,11 @@
 		7A468185247D1E0C006970AC /* ScreenStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStack.swift; sourceTree = "<group>"; };
 		7A6B6E50248948A700287846 /* PersonsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListTableViewCell.swift; sourceTree = "<group>"; };
 		7ABBA2592497A613001B048D /* PersonsDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDetailPresenter.swift; sourceTree = "<group>"; };
-		7ABBA25A2497A613001B048D /* PersonsDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDetailWorker.swift; sourceTree = "<group>"; };
 		7ABBA25B2497A613001B048D /* PersonsDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDetailRouter.swift; sourceTree = "<group>"; };
 		7ABBA25C2497A613001B048D /* PersonsDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDetailModels.swift; sourceTree = "<group>"; };
 		7ABBA25D2497A613001B048D /* PersonsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDetailViewController.swift; sourceTree = "<group>"; };
 		7ABBA25E2497A613001B048D /* PersonsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDetailInteractor.swift; sourceTree = "<group>"; };
 		7ABBA25F2497A613001B048D /* PersonsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDetailView.swift; sourceTree = "<group>"; };
-		7ABBA2672497A74F001B048D /* PersonsDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDetailTableViewCell.swift; sourceTree = "<group>"; };
-		7ABBA2692497A80F001B048D /* PersonsDetailHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDetailHeaderFooterView.swift; sourceTree = "<group>"; };
 		7AC51082247BFC0500209F21 /* NyanBankVIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NyanBankVIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC51085247BFC0500209F21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AC51087247BFC0500209F21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,14 +151,11 @@
 			isa = PBXGroup;
 			children = (
 				7ABBA25F2497A613001B048D /* PersonsDetailView.swift */,
-				7ABBA2672497A74F001B048D /* PersonsDetailTableViewCell.swift */,
-				7ABBA2692497A80F001B048D /* PersonsDetailHeaderFooterView.swift */,
-				7ABBA2592497A613001B048D /* PersonsDetailPresenter.swift */,
-				7ABBA25A2497A613001B048D /* PersonsDetailWorker.swift */,
-				7ABBA25B2497A613001B048D /* PersonsDetailRouter.swift */,
-				7ABBA25C2497A613001B048D /* PersonsDetailModels.swift */,
 				7ABBA25D2497A613001B048D /* PersonsDetailViewController.swift */,
 				7ABBA25E2497A613001B048D /* PersonsDetailInteractor.swift */,
+				7ABBA2592497A613001B048D /* PersonsDetailPresenter.swift */,
+				7ABBA25B2497A613001B048D /* PersonsDetailRouter.swift */,
+				7ABBA25C2497A613001B048D /* PersonsDetailModels.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -331,11 +322,9 @@
 				7AC5108A247BFC0500209F21 /* RootViewController.swift in Sources */,
 				7A6B6E51248948A700287846 /* PersonsListTableViewCell.swift in Sources */,
 				7ABBA2662497A613001B048D /* PersonsDetailView.swift in Sources */,
-				7ABBA2612497A613001B048D /* PersonsDetailWorker.swift in Sources */,
 				7A468186247D1E0C006970AC /* ScreenStack.swift in Sources */,
 				7ABBA2632497A613001B048D /* PersonsDetailModels.swift in Sources */,
 				7ABBA2642497A613001B048D /* PersonsDetailViewController.swift in Sources */,
-				7ABBA26A2497A80F001B048D /* PersonsDetailHeaderFooterView.swift in Sources */,
 				7AC51086247BFC0500209F21 /* AppDelegate.swift in Sources */,
 				7A01FF9B247D747400472EC5 /* PersonsListViewController.swift in Sources */,
 				7A01FF9D247D747400472EC5 /* PersonsListView.swift in Sources */,
@@ -346,7 +335,6 @@
 				7A01FF9C247D747400472EC5 /* PersonsListInteractor.swift in Sources */,
 				7A01FF97247D747400472EC5 /* PersonsListPresenter.swift in Sources */,
 				7ABBA2622497A613001B048D /* PersonsDetailRouter.swift in Sources */,
-				7ABBA2682497A74F001B048D /* PersonsDetailTableViewCell.swift in Sources */,
 				7AC51088247BFC0500209F21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

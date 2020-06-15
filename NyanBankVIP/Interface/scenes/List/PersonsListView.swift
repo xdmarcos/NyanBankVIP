@@ -34,6 +34,7 @@ class PersonsListView: UIView {
   }
 
   // MARK: Public
+
   let titleLabel: UILabel
   let descriptionLabel: UILabel
   let tableView: UITableView
@@ -93,13 +94,17 @@ class PersonsListView: UIView {
 }
 
 // MARK: Private
+
 private extension PersonsListView {
   func addCustomConstraints() {
     NSLayoutConstraint.activate([
       titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
       titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
       descriptionLabel.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor),
-      descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: ViewTraits.innerMargin),
+      descriptionLabel.topAnchor.constraint(
+        equalTo: titleLabel.bottomAnchor,
+        constant: ViewTraits.innerMargin
+      ),
       tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
       tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
       tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),

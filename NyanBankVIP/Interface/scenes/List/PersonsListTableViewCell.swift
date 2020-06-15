@@ -116,6 +116,7 @@ class PersonsListTableViewCell: UITableViewCell {
 }
 
 // MARK: Private
+
 private extension PersonsListTableViewCell {
   func addCustomConstraints() {
     NSLayoutConstraint.activate([

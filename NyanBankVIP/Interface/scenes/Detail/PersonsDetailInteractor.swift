@@ -5,36 +5,35 @@
 //  Created by xdmgzdev on 2020.
 //
 
+import Persons
 import UIKit
 
 protocol PersonsDetailBusinessLogic {
-
-    func doSomething(request: PersonsDetail.Something.Request)
+  func tryGetFileData(request: PersonsDetail.Data.Request)
 }
 
 protocol PersonsDetailDataStore {
-
-    //var name: String { get set }
+  var incommingPerson: Person { get set }
 }
 
 class PersonsDetailInteractor: PersonsDetailBusinessLogic, PersonsDetailDataStore {
+  var presenter: PersonsDetailPresentationLogic?
+  var incommingPerson: Person = Person(
+    firstName: "",
+    surname: "",
+    dateOfBirth: Date(),
+    issueCount: 0
+  )
+  var resultingData: [[String]] = []
 
-    var presenter: PersonsDetailPresentationLogic?
-    var worker: PersonsDetailWorker?
-    //var name: String = ""
+  // MARK: Do
 
-    // MARK: Do something
-    func doSomething(request: PersonsDetail.Something.Request) {
-
-        worker = PersonsDetailWorker()
-        worker?.doSomeWork()
-
-        let response = PersonsDetail.Something.Response()
-        presenter?.presentSomething(response: response)
-    }
-}
-
-// MARK: Output --- Present something
-extension PersonsDetailInteractor {
-
+  func tryGetFileData(request _: PersonsDetail.Data.Request) {
+    let response = PersonsDetail.Data.Response(
+      name: incommingPerson.firstName,
+      surname: incommingPerson.surname,
+      issuesCount: incommingPerson.issueCount
+    )
+    presenter?.presentFileData(response: response)
+  }
 }

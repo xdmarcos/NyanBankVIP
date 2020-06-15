@@ -40,11 +40,15 @@ class PersonsListInteractor: PersonsListBusinessLogic, PersonsListDataStore {
 
       let result = self.worker.retriveIssues(filename: request.fileName)
 
-      DispatchQueue.main.async {
+      DispatchQueue.main.async { [weak self] in
+        guard let self = self else { return }
+
         switch result {
         case let .success(persons):
+          self.issues = persons
           self.presenter?.presentIssues(response: PersonsList.Issues.Response(personsInfo: persons))
         case let .failure(error):
+          self.issues = []
           self.presenter?.presentIssuesError(response: PersonsList.Issues.Response(error: error))
         }
       }

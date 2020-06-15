@@ -8,17 +8,23 @@
 import UIKit
 
 enum PersonsDetail {
+  // MARK: Use cases
 
-    // MARK: Use cases
-    enum Something {
+  enum Data {
+    struct Request {}
 
-        struct Request {
-        }
-
-        struct Response {
-        }
-
-        struct ViewModel {
-        }
+    struct Response {
+      let name: String
+      let surname: String
+      let issuesCount: UInt
     }
+
+    struct ViewModel {
+      let screenTitle: String
+      let nameLabel = NSLocalizedString("Name:", comment: "")
+      let nameValue: String
+      let countLabel = NSLocalizedString("Issues count:", comment: "")
+      let countValue: String
+    }
+  }
 }

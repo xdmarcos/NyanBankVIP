@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PersonsListRoutingLogic {
-  // func routeToSomewhere(segue: UIStoryboardSegue?)
+  func navigateToDetailView(index: Int)
 }
 
 protocol PersonsListDataPassing {
@@ -20,32 +20,37 @@ class PersonsListRouter: PersonsListRoutingLogic, PersonsListDataPassing {
   weak var viewController: PersonsListViewController?
   var dataStore: PersonsListDataStore?
 
-  // MARK: Routing
+  func navigateToDetailView(index: Int) {
+    guard let sourceVC = viewController else { return }
 
-//    func routeToSomewhere(segue: UIStoryboardSegue?) {
-//
-//        let destinationVC = SomewhereViewController()
-//        if let sourceDS = dataStore, var destinationDS = destinationVC.router?.dataStore {
-//
-//            passData(from: sourceDS, to: &destinationDS)
-//        }
-//
-//        if let sourceVC = viewController {
-//            navigate(from: sourceVC, to: destinationVC)
-//        }
-//    }
-//
-//    // MARK: Navigation
-//
-//    func navigate(from source: PersonsListViewController, to destination: SomewhereViewController) {
-//
-//        source.show(destination, sender: nil)
-//    }
-//
-//    // MARK: Passing data
-//
-//    func passData(from source: PersonsListDataStore, to destination: inout SomewhereDataStore) {
-//
-//        destination.name = source.name
-//    }
+    let destinationVC = PersonsDetailViewController()
+    if let sourceDS = dataStore, var destinationDS = destinationVC.router?.dataStore {
+      passData(from: sourceDS, to: &destinationDS, selectedIndex: index)
+    }
+
+    navigate(from: sourceVC, to: destinationVC)
+  }
+}
+
+private extension PersonsListRouter {
+  // MARK: Passing data
+
+  func passData(
+    from source: PersonsListDataStore,
+    to destination: inout PersonsDetailDataStore,
+    selectedIndex: Int?
+  ) {
+    guard let index = selectedIndex, source.issues.count > index else { return }
+
+    destination.incommingPerson = source.issues[index]
+  }
+
+  // MARK: Navigation
+
+  func navigate(
+    from source: PersonsListViewController,
+    to destination: PersonsDetailViewController
+  ) {
+    source.navigationController?.pushViewController(destination, animated: true)
+  }
 }

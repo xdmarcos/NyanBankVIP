@@ -13,6 +13,13 @@ public struct Person {
   public let surname: String
   public let dateOfBirth: Date
   public let issueCount: UInt
+  
+  public init(firstName: String, surname: String, dateOfBirth: Date, issueCount: UInt) {
+    self.firstName = firstName
+    self.surname = surname
+    self.dateOfBirth = dateOfBirth
+    self.issueCount = issueCount
+  }
 }
 
 extension Person: Codable {

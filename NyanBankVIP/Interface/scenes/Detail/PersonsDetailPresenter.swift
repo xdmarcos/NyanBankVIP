@@ -8,23 +8,22 @@
 import UIKit
 
 protocol PersonsDetailPresentationLogic {
-
-    func presentSomething(response: PersonsDetail.Something.Response)
+  func presentFileData(response: PersonsDetail.Data.Response)
 }
 
 class PersonsDetailPresenter: PersonsDetailPresentationLogic {
+  weak var viewController: PersonsDetailDisplayLogic?
 
-    weak var viewController: PersonsDetailDisplayLogic?
+  func presentFileData(response: PersonsDetail.Data.Response) {
+    let screenTitle = "\(response.name) \(response.issuesCount)"
+    let name = "\(response.name) \(response.surname)"
+    let count = "\(response.issuesCount)"
 
-    // MARK: Do something
-    func presentSomething(response: PersonsDetail.Something.Response) {
-        
-        let viewModel = PersonsDetail.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
-    }
-}
-
-// MARK: Output --- Display something
-extension PersonsDetailPresenter {
-
+    let viewModel = PersonsDetail.Data.ViewModel(
+      screenTitle: screenTitle,
+      nameValue: name,
+      countValue: count
+    )
+    viewController?.displayFileData(viewModel: viewModel)
+  }
 }

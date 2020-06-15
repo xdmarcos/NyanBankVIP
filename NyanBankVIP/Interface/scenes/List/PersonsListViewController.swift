@@ -72,7 +72,7 @@ class PersonsListViewController: UIViewController {
       "This is a demo of data loading from CSV.\nUse the button above to select a file",
       comment: "Load button title"
     )
-    
+
     sceneView.tableView.register(
       PersonsListTableViewCell.self,
       forCellReuseIdentifier: PersonsListTableViewCell.reuseIdentifier
@@ -112,7 +112,9 @@ extension PersonsListViewController: UITableViewDelegate, UITableViewDataSource 
     return UITableViewCell()
   }
 
-  func tableView(_: UITableView, didSelectRowAt _: IndexPath) {}
+  func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
+    prepareForDetailScreen(selectedIndex: indexPath.row)
+  }
 
   private func configureCell(
     _ cell: PersonsListTableViewCell,
@@ -186,14 +188,14 @@ extension PersonsListViewController: PersonsListDisplayLogic {
 // MARK: Routing --- Navigate next scene
 
 extension PersonsListViewController {
-  private func prepareForNextScene() {
-    //        router?.routeToNextScene()
+  func prepareForDetailScreen(selectedIndex: Int) {
+    router?.navigateToDetailView(index: selectedIndex)
   }
 }
 
 // MARK: Private
 
-extension PersonsListViewController {
+private extension PersonsListViewController {
   func showFilesSelector(viewModel: PersonsList.Files.ViewModel) {
     let alertVC = UIAlertController(
       title: viewModel.alertTitle,

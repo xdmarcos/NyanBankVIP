@@ -6,8 +6,8 @@
 //  Copyright © 2020 Rabobank. All rights reserved.
 //
 
-import UIKit
 import Persons
+import UIKit
 
 protocol PersonsListBusinessLogic {
   func doRetriveList(request: PersonsList.Files.Request)
@@ -27,7 +27,7 @@ class PersonsListInteractor: PersonsListBusinessLogic, PersonsListDataStore {
 
   // MARK: Do something
 
-  func doRetriveList(request: PersonsList.Files.Request) {
+  func doRetriveList(request _: PersonsList.Files.Request) {
     samples = worker.retrieveFilesList()
 
     let response = PersonsList.Files.Response(fileList: samples)
@@ -35,13 +35,19 @@ class PersonsListInteractor: PersonsListBusinessLogic, PersonsListDataStore {
   }
 
   func doRetriveIssues(request: PersonsList.Issues.Request) {
-    let result = worker.retriveIssues(filename: request.fileName)
-    
-    switch result {
-    case let .success(persons):
-      presenter?.presentIssues(response: PersonsList.Issues.Response(personsInfo: persons))
-    case let .failure(error):
-      presenter?.presentIssuesError(response: PersonsList.Issues.Response(error: error))
+    DispatchQueue.global(qos: .background).async { [weak self] in
+      guard let self = self else { return }
+
+      let result = self.worker.retriveIssues(filename: request.fileName)
+
+      DispatchQueue.main.async {
+        switch result {
+        case let .success(persons):
+          self.presenter?.presentIssues(response: PersonsList.Issues.Response(personsInfo: persons))
+        case let .failure(error):
+          self.presenter?.presentIssuesError(response: PersonsList.Issues.Response(error: error))
+        }
+      }
     }
   }
 }

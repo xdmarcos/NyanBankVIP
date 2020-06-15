@@ -17,6 +17,7 @@
 		7A468186247D1E0C006970AC /* ScreenStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A468185247D1E0C006970AC /* ScreenStack.swift */; };
 		7A6B6E4F248945C500287846 /* Persons in Frameworks */ = {isa = PBXBuildFile; productRef = 7A6B6E4E248945C500287846 /* Persons */; };
 		7A6B6E51248948A700287846 /* PersonsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6B6E50248948A700287846 /* PersonsListTableViewCell.swift */; };
+		7ABBA254249117E2001B048D /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 7ABBA253249117E2001B048D /* UIComponents */; };
 		7AC51086247BFC0500209F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC51085247BFC0500209F21 /* AppDelegate.swift */; };
 		7AC51088247BFC0500209F21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC51087247BFC0500209F21 /* SceneDelegate.swift */; };
 		7AC5108A247BFC0500209F21 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC51089247BFC0500209F21 /* RootViewController.swift */; };
@@ -68,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ABBA254249117E2001B048D /* UIComponents in Frameworks */,
 				7A6B6E4F248945C500287846 /* Persons in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +203,7 @@
 			name = NyanBankVIP;
 			packageProductDependencies = (
 				7A6B6E4E248945C500287846 /* Persons */,
+				7ABBA253249117E2001B048D /* UIComponents */,
 			);
 			productName = NyanBankVIP;
 			productReference = 7AC51082247BFC0500209F21 /* NyanBankVIP.app */;
@@ -564,6 +567,10 @@
 		7A6B6E4E248945C500287846 /* Persons */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Persons;
+		};
+		7ABBA253249117E2001B048D /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

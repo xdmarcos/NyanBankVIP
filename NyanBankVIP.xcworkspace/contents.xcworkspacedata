@@ -11,6 +11,9 @@
          location = "group:Helpers"
          name = "Helpers">
          <FileRef
+            location = "group:/Users/xdmgzdev/iOSWorkspace/assigments/NyanBankVIP/Libraries/Helpers/UIComponents">
+         </FileRef>
+         <FileRef
             location = "group:/Users/xdmgzdev/iOSWorkspace/assigments/NyanBankVIP/Libraries/Helpers/CSVImporter">
          </FileRef>
       </Group>

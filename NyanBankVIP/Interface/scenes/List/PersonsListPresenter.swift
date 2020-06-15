@@ -15,9 +15,6 @@ protocol PersonsListPresentationLogic {
   func presentIssuesError(response: PersonsList.Issues.Response)
 }
 
-typealias Issue = PersonsList.Issues.IssueInfo
-typealias Option = PersonsList.Files.AlertOption
-
 class PersonsListPresenter: PersonsListPresentationLogic {
   weak var viewController: PersonsListDisplayLogic?
 
@@ -35,13 +32,29 @@ class PersonsListPresenter: PersonsListPresentationLogic {
 
   func presentIssues(response: PersonsList.Issues.Response) {
     let issues = createIssues(persons: response.personsInfo)
-    let viewModel = PersonsList.Issues.ViewModel(issues: issues)
+    let issuesLabel = NSLocalizedString("Issues", comment: "Issues label title for TV cell")
+    let navBarTitle = IssuesViewModel.navBarTitleDefault + " (\(issues.count))"
+    let viewModel = PersonsList.Issues.ViewModel(
+      issues: issues,
+      issuesLabelTitle: issuesLabel,
+      navBarTitle: navBarTitle
+    )
 
     viewController?.displayPersonIssues(viewModel: viewModel)
   }
 
   func presentIssuesError(response: PersonsList.Issues.Response) {
-    let errorDesc = response.error?.localizedDescription ?? "Unknown error"
+    var errorDesc = response.error?.localizedDescription ??
+      NSLocalizedString("Unknown error", comment: "")
+    if let error = response.error as? PersonsCSVLoaderError {
+      switch error {
+      case .failedToOpenStream:
+        errorDesc = NSLocalizedString("The file seems corrupted!", comment: "")
+      case .invalidPath:
+        errorDesc = NSLocalizedString("This feature is not implemented yet!", comment: "")
+      }
+    }
+
     let viewModel = PersonsList.Issues.ViewModel(errorDescription: errorDesc)
 
     viewController?.displayPersonIssues(viewModel: viewModel)
@@ -68,9 +81,25 @@ private extension PersonsListPresenter {
       Issue(
         id: OSAtomicIncrement32(&index),
         name: "\(person.firstName) \(person.surname)",
-        age: "\(person.dateOfBirth)",
+        age: "\(makeAge(person: person, referenceDate: Date(), callendar: Calendar.current))",
         issueCount: "\(person.issueCount)"
       )
     }
+  }
+
+  func makeAge(
+    person: Person,
+    referenceDate reference: Date,
+    callendar: Calendar
+  ) -> String {
+    let components = callendar
+      .dateComponents([.year, .month, .day], from: person.dateOfBirth, to: reference)
+    return [
+      (NSLocalizedString("%dy", comment: "Age in years"), components.year),
+      (NSLocalizedString("%dm", comment: "Age in months"), components.month),
+      (NSLocalizedString("%dd", comment: "Age in days"), components.day),
+    ]
+    .compactMap { $0.1 != nil && $0.1! > 0 ? String(format: $0.0, $0.1!) : nil }
+    .joined(separator: " ")
   }
 }

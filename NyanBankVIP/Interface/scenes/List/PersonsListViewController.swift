@@ -6,9 +6,9 @@
 //  Copyright © 2020 Rabobank. All rights reserved.
 //
 
+import UIComponents
 import UIKit
 
-typealias AlertHandler = (UIAlertAction) -> Void
 protocol PersonsListDisplayLogic: class {
   func displayFileList(viewModel: PersonsList.Files.ViewModel)
   func displayPersonIssues(viewModel: PersonsList.Issues.ViewModel)
@@ -20,7 +20,7 @@ class PersonsListViewController: UIViewController {
 
   private lazy var sceneView = PersonsListView()
   private var actionHandler: AlertHandler?
-  private var datasource: [PersonsList.Issues.IssueInfo] = []
+  private var viewModel = IssuesViewModel()
 
   // MARK: Object lifecycle
 
@@ -59,7 +59,7 @@ class PersonsListViewController: UIViewController {
     super.viewDidLoad()
 
     navigationController?.navigationBar.prefersLargeTitles = true
-    title = NSLocalizedString("Persons", comment: "Title for navigation bar")
+    title = IssuesViewModel.navBarTitleDefault
     navigationItem.rightBarButtonItem = UIBarButtonItem(
       title: NSLocalizedString("Load", comment: "Load button title"),
       style: .plain,
@@ -67,6 +67,12 @@ class PersonsListViewController: UIViewController {
       action: #selector(loadFiles)
     )
 
+    sceneView.titleLabel.text = NSLocalizedString("Hello!", comment: "Load button title")
+    sceneView.descriptionLabel.text = NSLocalizedString(
+      "This is a demo of data loading from CSV.\nUse the button above to select a file",
+      comment: "Load button title"
+    )
+    
     sceneView.tableView.register(
       PersonsListTableViewCell.self,
       forCellReuseIdentifier: PersonsListTableViewCell.reuseIdentifier
@@ -88,11 +94,11 @@ class PersonsListViewController: UIViewController {
 
 extension PersonsListViewController: UITableViewDelegate, UITableViewDataSource {
   func numberOfSections(in _: UITableView) -> Int {
-    return 1
+    return viewModel.sections
   }
 
   func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-    return datasource.count
+    return viewModel.issues.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -106,16 +112,17 @@ extension PersonsListViewController: UITableViewDelegate, UITableViewDataSource 
     return UITableViewCell()
   }
 
-  func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {}
+  func tableView(_: UITableView, didSelectRowAt _: IndexPath) {}
 
   private func configureCell(
     _ cell: PersonsListTableViewCell,
     forIndexPath indexPath: IndexPath
   ) -> UITableViewCell {
-    let issue = datasource[indexPath.row]
-    cell.symbolLabel.text = issue.issueCount
-    cell.titleLabel.text = issue.name
-    cell.pathLabel.text = issue.age
+    let issue = viewModel.issues[indexPath.row]
+    cell.issuesNumberLabel.text = issue.issueCount
+    cell.issuesLabel.text = viewModel.issuesLabelTitle
+    cell.nameLabel.text = issue.name
+    cell.ageLabel.text = issue.age
 
     return cell
   }
@@ -130,6 +137,8 @@ extension PersonsListViewController {
   }
 
   func tryGetIssues(file: String) {
+    ActivityHUD.show()
+
     let request = PersonsList.Issues.Request(fileName: file)
     interactor?.doRetriveIssues(request: request)
   }
@@ -143,12 +152,16 @@ extension PersonsListViewController: PersonsListDisplayLogic {
   }
 
   func displayPersonIssues(viewModel: PersonsList.Issues.ViewModel) {
+    ActivityHUD.hide()
+
     guard viewModel.errorDescription == nil else {
       showError(errorDescription: viewModel.errorDescription ?? "")
       return
     }
 
-    datasource = viewModel.issues
+    sceneView.showTableView()
+    self.viewModel = viewModel
+    title = viewModel.navBarTitle
     sceneView.tableView.reloadData()
   }
 

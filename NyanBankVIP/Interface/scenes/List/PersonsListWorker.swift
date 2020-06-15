@@ -6,7 +6,6 @@
 //  Copyright © 2020 Rabobank. All rights reserved.
 //
 
-import UIKit
 import Persons
 
 struct PersonsListWorker {

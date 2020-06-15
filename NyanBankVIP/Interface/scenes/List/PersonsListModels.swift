@@ -5,11 +5,18 @@
 //  Created by xdmgzdev on 25/05/2020.
 //  Copyright © 2020 Rabobank. All rights reserved.
 //
-import UIKit
+
 import Persons
+import UIKit
+
+typealias AlertHandler = (UIAlertAction) -> Void
+typealias Issue = PersonsList.Issues.IssueInfo
+typealias Option = PersonsList.Files.AlertOption
+typealias IssuesViewModel = PersonsList.Issues.ViewModel
 
 enum PersonsList {
   // MARK: Use cases
+
   // Files
   enum Files {
     struct Request {}
@@ -30,8 +37,6 @@ enum PersonsList {
     }
   }
 
-
-
   // Issues
   enum Issues {
     struct Request {
@@ -49,12 +54,26 @@ enum PersonsList {
     }
 
     struct ViewModel {
+      static let navBarTitleDefault = NSLocalizedString(
+        "Persons",
+        comment: "Title for navigation bar"
+      )
       let issues: [IssueInfo]
+      let sections = 1
+      let issuesLabelTitle: String
+      let navBarTitle: String
       let errorDescription: String?
 
-      init(issues: [IssueInfo] = [], errorDescription: String? = nil) {
+      init(
+        issues: [IssueInfo] = [],
+        issuesLabelTitle: String = "",
+        navBarTitle: String = "",
+        errorDescription: String? = nil
+      ) {
         self.issues = issues
         self.errorDescription = errorDescription
+        self.issuesLabelTitle = issuesLabelTitle
+        self.navBarTitle = navBarTitle
       }
     }
 
